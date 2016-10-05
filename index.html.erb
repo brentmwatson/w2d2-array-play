@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Array Play</title>
+    </head>
+    <body>
+        <!-- Create an array of all of the students in our class. Assign it to a variable named "our_class". -->
+        <div>
+            <h1>Our Class</h1>
+            <p><%=our_class%></p>
+
+        </div>
+        <!-- Find all the students whose first name is less than 5 characters -->
+        <div>
+            <h1>Short Names</h1>
+            <p><%=short_name_class%></p>
+        </div>
+        <!-- Turn a sentence into an Array, and select the words that are four characters long. Here's your sentence: sentence = "Ruby is actually kind of fun once you get used to it." -->
+        <div>
+            <h1>Sentance Array</h1>
+            <p>
+              Sentence: Ruby is actually kind of fun once you get used to it.
+            </p>
+
+            <p>
+              Short words in sentence:<%=short_words%>
+            </p>
+        </div>
+        <!-- Create an array of movies with budgets of less than 100. -->
+        <div>
+            <h1>Movies Under 100k Budget</h1>
+            <%=movies_under_100%>
+        </div>
+        <!-- Create an array of movies that starred Leonard DiCaprio. -->
+        <div>
+            <h1>Movies With My Dreamboat</h1>
+            <%= movies_leo%>
+        </div>
+
+    </body>
+</html>
