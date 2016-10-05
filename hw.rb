@@ -8,6 +8,7 @@ require 'shellwords'
 
 # Create an array of all of the students in our class. Assign it to a variable named "our_class".
 our_class = ["Brent", "Chris", "Jon", "Keith", "Luis", "Michael", "Zachary"]
+our_class = %w(Brent Chris Jon Keith Luis Michael Zachary)
 # Find all the students whose first name is less than 5 characters
 # create empty container array to store names
 short_name_class = []
@@ -16,6 +17,11 @@ short_name_class = []
 our_class.each do |name|
   short_name_class << name if name.length < 5
 end
+
+# from Chris
+short_name_class = our_class.select { |name| student.length < 5 }
+puts "select version:"
+puts short_name_class
 
 # Turn a sentence into an Array, select the words that are four characters long. Here's your sentence:
 
@@ -31,6 +37,21 @@ sentence.split.each do |word|
     short_words << word
   end
 end
+
+puts short_words
+
+# from Chris
+short_words = sentence.split.select { |word| student.length == 4v}
+puts short_words
+
+def short_words(text, num =4)
+  text.split.select { |word| word.length == num }
+end
+
+def short_words(text)
+  how_many_words(text)
+end
+
 # Create an array of movies with budgets of less than 100 AND another array of movies that starred Leonard DiCaprio.
 
 movies = []
@@ -69,21 +90,17 @@ movies.each do |movie|
   end
 end
 
+puts movies_under_100
+
+  # from Chris
+movies_under_100 = movies.selesct { |hash| hash[budget] < 100 }.collect {|hash| hash[:title] }
+puts  "Select version:"
+puts movies_under_100
+
 movies_leo =[]
 
 movies.each do |movie|
   if movie[:stars].include? "Leonardo DiCaprio"
     movies_leo <<  movie[:title]
   end
-end
-
-# ********save to a file and close it*********
-# create new file and title file
-new_file = File.open("./#{lipsum}.html", "w+")
-
-# push new file, read html file
-new_file << ERB.new(File.read("index.html.erb")).result(binding)
-
-# close file
-new_file.close
 end
