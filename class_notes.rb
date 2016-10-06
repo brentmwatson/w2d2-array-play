@@ -1,5 +1,5 @@
 class method
-  kid class class metho
+  kid class class method
   baby class class class method
 
 class Person

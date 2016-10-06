@@ -8,7 +8,8 @@ require 'shellwords'
 
 # Create an array of all of the students in our class. Assign it to a variable named "our_class".
 our_class = ["Brent", "Chris", "Jon", "Keith", "Luis", "Michael", "Zachary"]
-our_class = %w(Brent Chris Jon Keith Luis Michael Zachary)
+#OR our_class = %w(Brent Chris Jon Keith Luis Michael Zachary)
+
 # Find all the students whose first name is less than 5 characters
 # create empty container array to store names
 short_name_class = []
